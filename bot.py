@@ -27,5 +27,13 @@ async def on_ready():
 async def ping(ctx):
     await ctx.send(":ping_pong: **Pong!**")
 
+@client.command(brief='See what guild you are in.')
+async def guild(ctx):
+    await ctx.send(ctx.guild)
+
+@client.command(brief='Use quotes for your message.')
+async def echo(ctx, arg):
+    await ctx.send(arg)
+
 #Every bot has a unique token - insert your bot's token within the quotation marks
 client.run("NoStealingMyTokenSmurf;/")
